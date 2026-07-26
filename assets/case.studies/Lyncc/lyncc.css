@@ -1,0 +1,729 @@
+/* =========================================
+   RESET & BASE VARIABLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* Lyncc Brand Colors & Portfolio Dark Mode */
+    --accent: #FFC107;
+    /* Lyncc Yellow from the images */
+    --accent-hover: #e0a800;
+    --bg-dark: #161616;
+    /* Matches your main portfolio */
+    --bg-card: #1a1a1a;
+    --bg-light: #222222;
+    --text-main: #f5f5f5;
+    --text-muted: #a0aec0;
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
+    background-size: 90px 64px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.case-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.case-nav {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 3rem;
+    /* Pushes items to the extreme left and right */
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.case-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.case-menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.case-menu a {
+    color: white;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.case-menu a:hover {
+    color: var(--accent);
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 768px) {
+    .case-nav {
+        width: 100%;
+        padding: 0 1.5rem;
+        height: 70px;
+    }
+
+    .case-menu {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+/* =========================================
+   2. CASE STUDY HERO (Desktop Layout)
+========================================= */
+.case-hero {
+    padding: 140px 5% 80px 5%;
+    width: 100%;
+    box-sizing: border-box;
+    /* Stops horizontal scrolling/bleeding */
+    overflow-x: hidden;
+}
+
+.case-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    /* Forces text and image side-by-side on desktop */
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+}
+
+/* --- Left Content (Typography) --- */
+.case-hero-content {
+    flex: 1;
+    /* Takes up half the space */
+    min-width: 0;
+    /* Magic fix: Prevents long text from breaking the flexbox */
+}
+
+.case-hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.case-hero-role {
+    font-size: 1.1rem;
+    color: #a0aec0;
+    line-height: 1.5;
+    white-space: normal;
+    /* Fixes text getting cut off on mobile */
+    word-wrap: break-word;
+}
+
+/* --- Right Visual (The Map) --- */
+.case-hero-visual {
+    flex: 1.2;
+    /* Gives the wide map slightly more room than the text */
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    min-width: 0;
+    /* Magic fix for image overflow */
+}
+
+.map-container {
+    width: 100%;
+    border-radius: 16px;
+    background: transparent;
+    box-sizing: border-box;
+    /* Keeps the border inside the container */
+
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hero-map-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+/* =========================================
+   3. MOBILE & TABLET ADJUSTMENTS
+========================================= */
+@media screen and (max-width: 992px) {
+    .case-hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .case-hero-container {
+        flex-direction: column;
+        /* Stacks the text on top of the map for phones */
+        gap: 40px;
+    }
+
+    .case-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .case-hero-visual {
+        justify-content: center;
+    }
+}
+
+.map-container {
+    width: 100%;
+    max-width: 650px;
+    /* Much wider than the phone to show off the map details */
+    border-radius: 16px;
+    /* Matches the rounded corners of your map image */
+    background: transparent;
+
+    /* Adds a subtle dark shadow and very faint border to separate it from the site background */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.map-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.8);
+}
+
+.hero-map-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.presentation-card {
+    background-color: #FFC107;
+    /* Beautiful yellow presentation backdrop */
+    border-radius: 30px;
+    padding: 40px 40px 0 40px;
+    /* Padding on top/sides, 0 on bottom */
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Snaps the phone to the bottom edge of the box */
+
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    /* Clips the bottom of the phone neatly */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.presentation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.7);
+}
+
+.phone-mockup {
+    width: 100%;
+    max-width: 320px;
+    /* Increase this to 340px or 360px if the phone isn't wide enough */
+    height: auto;
+    display: block;
+    transform: translateY(20px);
+    /* Increase this number to push the phone further down */
+}
+
+
+/* =========================================
+   CONTENT SECTIONS
+========================================= */
+
+.content-section,
+.screens-section {
+    padding: 130px 0;
+}
+
+.content-container {
+    width: min(1100px, calc(100% - 40px));
+    margin: auto;
+}
+
+.section-label {
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 100px;
+}
+
+.two-column h2,
+.challenge-section h2,
+.screens-section h2,
+.outcome-section h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    letter-spacing: -2px;
+    line-height: 1.1;
+    color: white;
+}
+
+.content-text {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.content-text p {
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   LYNCC 6-STEP PROCESS LAYOUT
+========================================= */
+
+.lyncc-process {
+    padding: 100px 5%;
+    background-color: #1c1c1c;
+    /* Matches your dark theme */
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-subtitle {
+    color: var(--gray, #aaaaaa);
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Individual Step Container */
+.process-step {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+/* Reverses the layout for even steps (Image Left, Text Right) */
+.process-step.reverse {
+    flex-direction: row-reverse;
+}
+
+.step-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.step-badge {
+    display: inline-block;
+    background-color: rgba(46, 204, 113, 0.1);
+    color: var(--accent-green, #2ecc71);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.step-content h3 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.step-content p {
+    color: var(--gray, #aaaaaa);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Image Styling & Hover Effect */
+.step-image {
+    flex: 1.3;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.step-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.step-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 193, 7, 0.3);
+    /* Subtle yellow accent from your UI on hover */
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 992px) {
+
+    .process-step,
+    .process-step.reverse {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 80px;
+    }
+
+    .step-content {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+/* =========================================
+   CHALLENGE
+========================================= */
+
+.challenge-section {
+    background: var(--bg-card);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 130px 0;
+}
+
+.challenge-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    margin-top: 70px;
+}
+
+.challenge-intro h3 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    color: white;
+}
+
+.challenge-intro p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.challenge-card {
+    padding: 40px;
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.challenge-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.challenge-card span {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.challenge-card h4 {
+    font-size: 1.5rem;
+    margin: 20px 0 15px;
+    color: white;
+}
+
+.challenge-card p {
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+/* =========================================
+   SCREENS & UI SHOWCASE
+========================================= */
+
+.section-intro {
+    max-width: 650px;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.showcase-block {
+    margin-bottom: 60px;
+}
+
+.showcase-text {
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+.showcase-text h3 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.showcase-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.full-width-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: #ffffff;
+    /* White background to let the transparent/white app mockups pop */
+    padding: 20px;
+}
+
+.screen-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 70px;
+}
+
+.screen-card {
+    padding: 30px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.screen-card span {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.screen-card h3 {
+    margin: 15px 0;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.screen-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* =========================================
+   OUTCOME
+========================================= */
+
+.outcome-section {
+    background: var(--bg-card);
+    border-top: 1px solid var(--border);
+    padding: 130px 0;
+}
+
+.outcome-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-top: 70px;
+}
+
+.outcome-grid h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.outcome-grid p {
+    line-height: 1.8;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   TAKEAWAY
+========================================= */
+
+.takeaway-section {
+    padding: 150px 0;
+    text-align: center;
+}
+
+.takeaway-section h2 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 1.1;
+    letter-spacing: -3px;
+    color: white;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.case-footer {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.case-footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.case-footer a:hover {
+    color: var(--accent);
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (lyncc.css)
+========================================= */
+@media screen and (max-width: 768px) {
+    .case-nav {
+        width: 100%;
+        padding: 0 1.5rem;
+        height: 70px;
+    }
+
+    /* Mobile Menu Dropdown */
+    .case-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-dark);
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .case-menu.active {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+        border: none;
+        background: none;
+        color: white;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .case-hero-container {
+        flex-direction: column;
+        text-align: left;
+        gap: 50px;
+    }
+
+    .case-hero-title {
+        font-size: 2.8rem;
+    }
+
+    .case-hero-visual {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .map-container {
+        max-width: 100%;
+    }
+
+    .presentation-card {
+        max-width: 340px;
+    }
+
+    /* FIXES THE SQUISHED TEXT: Forces grid into 1 column */
+    .two-column,
+    .challenge-intro,
+    .challenge-grid,
+    .screen-grid,
+    .outcome-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Adjust padding for mobile viewing */
+    .content-section,
+    .screens-section,
+    .challenge-section,
+    .outcome-section {
+        padding: 70px 0;
+    }
+
+    .takeaway-section {
+        padding: 80px 0;
+    }
+}

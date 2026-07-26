@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amazon Now 1P Operations Case Study — 30-Minute Micro-Fulfillment">
+    <title>Amazon Now | 1P Operations Case Study</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;750;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="amazon-1p.css">
+</head>
+
+<body>
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="#top" class="brand">
+                <span class="brand-mark">A</span>
+                <span class="brand-text">Amazon Now</span>
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="menu-button" aria-label="Toggle Menu">&#9776;</button>
+
+            <div class="nav-right-group">
+                <nav class="main-nav" aria-label="Main Navigation">
+                    <a href="#overview">Overview</a>
+                    <a href="#operations">Operations</a>
+                    <a href="#process">Process</a>
+                    <a href="#comparison">1P vs 3P</a>
+                    <a href="#outcomes">Outcomes</a>
+                </nav>
+                <div class="external-nav">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../index.html#experience">Experience</a>
+                    <a href="../../../index.html#case-studies">Case Studies</a>
+                    <a href="../../../index.html#contact">Contact</a>
+                    <a href="../../../assets/files/Sandeep_Busa_Resume.pdf" class="nav-cta">Resume</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+    <main id="top">
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+        <section class="hero" id="overview">
+            <div class="container">
+                <div class="hero-label reveal">Product Operations Case Study</div>
+
+                <h1 class="hero-title reveal">
+                    Architecting the 1P Operations behind 30-Minute Delivery
+                </h1>
+
+                <p class="hero-description reveal">
+                    A product and operations case study exploring how Amazon manages hyper-local inventory,
+                    micro-fulfillment nodes, and data-driven exception handling to power the ultra-fast Amazon Now
+                    experience.
+                </p>
+
+                <div class="article-meta reveal">
+                    <div><span>Case Study</span><strong>Amazon Now</strong></div>
+                    <div><span>Focus</span><strong>Micro-Fulfillment</strong></div>
+                    <div><span>Role</span><strong>CXQ Operations Associate II</strong></div>
+                </div>
+
+                <!-- KEY TAKEAWAYS -->
+                <div class="takeaways reveal">
+                    <div class="takeaways-heading">
+                        <span class="eyebrow">Key Takeaways</span>
+                        <h2>The operating model behind ultra-fast fulfillment</h2>
+                    </div>
+                    <div class="takeaways-list">
+                        <div class="takeaway-item">
+                            <span class="takeaway-number">01</span>
+                            <p>Hitting a 30-minute SLA requires shifting from massive centralized warehouses to
+                                hyper-local micro-fulfillment nodes.</p>
+                        </div>
+                        <div class="takeaway-item">
+                            <span class="takeaway-number">02</span>
+                            <p>Direct 1P control over perishable inventory and picking workflows guarantees quality and
+                                speed.</p>
+                        </div>
+                        <div class="takeaway-item">
+                            <span class="takeaway-number">03</span>
+                            <p>Real-time exception monitoring prevents localized courier delays from cascading into
+                                systemic network failures.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IMAGE 1: HERO VISUAL -->
+                <div class="image-container reveal" style="margin: 4rem 0;">
+                    <img src="./img2.webp" alt="Fresh Groceries and Fulfillment" class="parallax-img" data-speed="0.05">
+                </div>
+
+                <!-- KPI GRID -->
+                <div class="kpi-grid reveal">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Operating Model</div>
+                        <div class="kpi-value">1P Micro-Fulfillment</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Target SLA</div>
+                        <div class="kpi-value">&lt; 30-Minute Delivery</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Core Inventory</div>
+                        <div class="kpi-value">Fresh & Essentials</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Business Outcome</div>
+                        <div class="kpi-value">Hyper-Local Speed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             ARTICLE INTRODUCTION
+             ================================================= -->
+        <section class="section" id="operations">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">The Context</span>
+                    <h2 class="section-title">The customer sees speed. Operations maps the grid.</h2>
+                    <p class="section-subtitle">
+                        Amazon Now promises fresh groceries and daily essentials in 30 minutes or less. Behind that
+                        experience is a massive shift in supply chain architecture, moving products closer to the
+                        customer than ever before.
+                    </p>
+                </div>
+
+                <div class="article-layout">
+                    <article class="text-block reveal-left">
+                        <h3>The 30-Minute Challenge</h3>
+                        <p>Delivering perishables and essentials within a 30-minute window means traditional linehaul
+                            transportation models no longer work.</p>
+                        <p>The operation must rely on a fragmented network of specialized, smaller locations integrated
+                            directly into populated urban and suburban areas. Pickers must grab items in minutes, and
+                            couriers must be dispatched instantly.</p>
+                        <div class="challenge-highlight">
+                            <strong>How do you orchestrate speed, safety, and inventory accuracy when your total
+                                operational buffer is less than 30 minutes?</strong>
+                        </div>
+                    </article>
+
+                    <aside class="insight-card reveal">
+                        <span class="eyebrow">Product Insight</span>
+                        <h3>Proximity is Product.</h3>
+                        <p>Fast delivery is not just about moving vehicles faster. It is about predictive inventory
+                            routing—ensuring the right avocados, electronics, and essentials are already sitting in a
+                            2-mile radius of the customer before they even order.</p>
+                    </aside>
+                </div>
+
+                <!-- IMAGE 2: OPERATIONS CONTEXT -->
+                <div class="image-container reveal" style="margin-top: 3rem;">
+                    <img src="./img3.jpg" alt="Rapid Order Packing" class="parallax-img" data-speed="0.04">
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             PROCESS FLOW
+             ================================================= -->
+        <section class="section section-soft" id="process">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Operating Workflow</span>
+                    <h2 class="section-title">The 30-Minute Fulfillment Dash</h2>
+                    <p class="section-subtitle">Every minute is accounted for in the 1P hyper-local workflow.</p>
+                </div>
+
+                <div class="process-wrapper reveal">
+                    <div class="process-flow">
+                        <div class="process-node">
+                            <div class="node-icon">01</div>
+                            <div>
+                                <div class="node-title">Local Sync</div>
+                                <div class="node-desc">Positioning inventory in urban micro-nodes.</div>
+                            </div>
+                        </div>
+                        <div class="process-node">
+                            <div class="node-icon">02</div>
+                            <div>
+                                <div class="node-title">Order Route</div>
+                                <div class="node-desc">Real-time allocation to the closest facility.</div>
+                            </div>
+                        </div>
+                        <div class="process-node">
+                            <div class="node-icon">03</div>
+                            <div>
+                                <div class="node-title">Rapid Pick</div>
+                                <div class="node-desc">Accelerated, safe packing of fresh goods.</div>
+                            </div>
+                        </div>
+                        <div class="process-node">
+                            <div class="node-icon">04</div>
+                            <div>
+                                <div class="node-title">Dispatch</div>
+                                <div class="node-desc">Immediate courier matching and handoff.</div>
+                            </div>
+                        </div>
+                        <div class="process-node">
+                            <div class="node-icon">05</div>
+                            <div>
+                                <div class="node-title">The Dash</div>
+                                <div class="node-desc">Last-mile transit with minute-by-minute tracking.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             1P VS 3P COMPARISON
+             ================================================= -->
+        <section class="section" id="comparison">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Strategic Comparison</span>
+                    <h2 class="section-title">1P vs 3P: Why ownership matters when minutes count</h2>
+                    <p class="section-subtitle">
+                        When the SLA is 30 minutes, API latency from external 3P logistics partners can result in missed
+                        deliveries. 1P guarantees direct control.
+                    </p>
+                </div>
+
+                <!-- IMAGE 3: TRANSPORTATION -->
+                <div class="image-container reveal" style="margin-bottom: 3rem; max-height: 400px;">
+                    <img src="./img1.jpg" alt="Courier on the move" class="parallax-img" data-speed="0.03">
+                </div>
+
+                <div class="comparison-grid">
+                    <!-- 1P -->
+                    <div class="comp-card model-1p reveal-left">
+                        <div class="comp-header">
+                            <span class="eyebrow">Amazon Managed</span>
+                            <h3>1P Micro-Fulfillment</h3>
+                        </div>
+                        <div class="comp-body">
+                            <div class="comp-row"><span class="comp-metric">Inventory</span><span
+                                    class="comp-value">Managed directly by Amazon</span></div>
+                            <div class="comp-row"><span class="comp-metric">Fulfillment</span><span
+                                    class="comp-value">Amazon-controlled local nodes</span></div>
+                            <div class="comp-row"><span class="comp-metric">Visibility</span><span
+                                    class="comp-value">Minute-by-minute live data</span></div>
+                            <div class="comp-row"><span class="comp-metric">Exceptions</span><span
+                                    class="comp-value">Instant internal triage protocols</span></div>
+                        </div>
+                    </div>
+
+                    <!-- 3P -->
+                    <div class="comp-card model-3p reveal">
+                        <div class="comp-header">
+                            <span class="eyebrow">Partner Managed</span>
+                            <h3>3P Logistics</h3>
+                        </div>
+                        <div class="comp-body">
+                            <div class="comp-row"><span class="comp-metric">Inventory</span><span
+                                    class="comp-value">Managed by third-party sellers</span></div>
+                            <div class="comp-row"><span class="comp-metric">Fulfillment</span><span
+                                    class="comp-value">Partner-dependent execution speed</span></div>
+                            <div class="comp-row"><span class="comp-metric">Visibility</span><span
+                                    class="comp-value">Delayed via partner API reporting</span></div>
+                            <div class="comp-row"><span class="comp-metric">Exceptions</span><span
+                                    class="comp-value">Requires external escalation</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             OUTCOMES
+             ================================================= -->
+        <section class="section section-soft" id="outcomes">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Business Impact</span>
+                    <h2 class="section-title">Delivering the 30-Minute Promise</h2>
+                    <p class="section-subtitle">
+                        Treating ultra-fast operations as a continuous product loop creates measurable value for the
+                        customer and the network.
+                    </p>
+                </div>
+
+                <!-- IMAGE 4: ANALYTICS -->
+                <div class="image-container reveal" style="margin-bottom: 3rem; max-height: 400px;">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+                        alt="Data Analytics Dashboard" class="parallax-img" data-speed="0.04">
+                </div>
+
+                <div class="outcome-grid">
+                    <div class="outcome-card reveal">
+                        <span class="outcome-number">01</span>
+                        <h3>SLA Compliance</h3>
+                        <p>Improved 30-min delivery success rates by optimizing courier-to-node handoff protocols.</p>
+                    </div>
+                    <div class="outcome-card reveal">
+                        <span class="outcome-number">02</span>
+                        <h3>Real-Time Visibility</h3>
+                        <p>Automated dashboards to track picking speeds and predict localized traffic bottlenecks.</p>
+                    </div>
+                    <div class="outcome-card reveal">
+                        <span class="outcome-number">03</span>
+                        <h3>Defect Reduction</h3>
+                        <p>Reduced exception rates for perishable items by standardizing quality control at local nodes.
+                        </p>
+                    </div>
+                    <div class="outcome-card reveal">
+                        <span class="outcome-number">04</span>
+                        <h3>Scalability</h3>
+                        <p>Documented workflows allowed rapid expansion of the 30-min service to new international
+                            cities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ======================================
+         FOOTER
+    ======================================= -->
+    <footer class="case-footer">
+        <a href="../../../index.html">
+            ← Back to Portfolio
+        </a>
+
+        <a href="mailto:sandeepbusalxp@gmail.com" class="btn-primary">
+            Get In Touch
+        </a>
+
+        <p>
+            © 2026 Sandeep Busa
+        </p>
+    </footer>
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+    <script src="./amazon-1p.js"></script>
+</body>
+
+</html>
